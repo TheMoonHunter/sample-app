@@ -19,9 +19,9 @@ spec:
       containers:
       - name: "sample-app"
         image: "pauloiza/sample-app:latest"
-	env:
-	- name: APP_VERSION
-	- value: "{{ .Chart.Version }}"
+        env:
+        - name: APP_VERSION
+          value: "{{ .Chart.Version }}"
 ---
 apiVersion: "autoscaling/v2beta1"
 kind: "HorizontalPodAutoscaler"
