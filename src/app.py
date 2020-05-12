@@ -8,6 +8,7 @@ from flask_cors import CORS
 # Env variables
 ALLOWED_ORIGINS = os.environ.get('ALLOWED_ORIGINS', '["*"]')
 APP_VERSION = os.environ.get('APP_VERSION', '0.0.1')
+USER = os.environ.get('USER', 'user')
 FLASK_HOST = os.environ.get("FLASK_HOST", 'localhost')
 FLASK_PORT = os.environ.get("FLASK_PORT", '8080')
 
@@ -23,7 +24,7 @@ logging.info('CORS allowed origins set to ["*"]')
 @app.route('/')
 def welcome():
     """ Welcome Page. """
-    return "Hello World. Never do Live Demos"
+    return f"Hello {USER} Never do Live Demos"
 
 @app.route('/health')
 def health_check():
