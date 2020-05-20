@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: "sample-app"
-        image: "pauloiza/sample-app:latest"
+        image: "pauloiza/sample-app@sha256:7e6a6c848bb323f10a5a561281568d1495df6f39b68ea551177615e92535806b"
         env:
         - name: APP_VERSION
           value: "{{ .Chart.Version }}"
