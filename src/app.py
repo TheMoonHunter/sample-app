@@ -24,7 +24,7 @@ logging.info('CORS allowed origins set to ["*"]')
 @app.route('/')
 def welcome():
     """ Welcome Page. """
-    return f"Hello {USER} Never do Live Demos"
+    return f"Hello {USER}. Hashed image works."
 
 @app.route('/health')
 def health_check():
